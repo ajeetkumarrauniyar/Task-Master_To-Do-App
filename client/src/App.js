@@ -12,7 +12,7 @@ function AddTask() {
 
     try {
        // Sending the input data to the backend via a POST request
-      const res = await fetch("http://localhost:5000/", {
+      const res = await fetch("https://task-master-gvk8.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(taskInput),
@@ -32,7 +32,7 @@ function AddTask() {
   // Fetching the Task List from the storage,  Default GET Method
   const getData = async () => {
     try {
-      const result = await fetch("http://localhost:5000/");
+      const result = await fetch("https://task-master-gvk8.onrender.com");
       const data = await result.json(); // Converting the data into JSON
       setTaskItemList(data); // Update the task list with the retrieved data
     } catch (error) {
