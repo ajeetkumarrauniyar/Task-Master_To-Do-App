@@ -1,0 +1,8 @@
+services:
+  - name: client
+    buildCommand: npm run build
+    directory: /path/to/client
+  - name: server
+    buildCommand: npm run build
+    startCommand: node server.js
+    directory: /path/to/server
